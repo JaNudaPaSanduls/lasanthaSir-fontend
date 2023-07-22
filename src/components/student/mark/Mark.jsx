@@ -78,7 +78,7 @@ const StudentMark = () => {
           setChecked(false);
           const phone = res.data.phone;
           // eslint-disable-next-line no-undef
-          JavaScriptInterface.SendSMS(phone, paid);
+          JavaScriptInterface.SendSMS(phone, paid ? "true" : "false", "");
         })
         .catch((err) => {
           message.destroy();
